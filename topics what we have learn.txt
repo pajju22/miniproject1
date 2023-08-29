@@ -1,0 +1,230 @@
+1) what is git ?
+ git is version control system used to track changes in computer files, it is a tool to manage ur code & files history while workng remotely
+
+
+2) what is github?
+ git hub hosting service for git repo git is the tool while git hub is the service to use git.
+
+
+
+commands for git
+1)mkdir-used to create a directory
+2)cd-used to changes to directory 
+3)pwd-used to check the present working directory
+4)ls-used to view the files in present working directory
+5)git status-used to check the status of files
+7)git add-used to add the files to stageing area 
+8)git commit-m- used to commit the files
+9)git config --global user.email-used to  config the mail id
+10)git config --global user.name- used to config the user
+11)rm -used to remove the directory
+12)vim - is a text files creater and editer
+
+
+BRANCHING
+
+->in github master is a main branch 
+->all the source code is stored in master branch riview by the team topis wt we learn
+
+
+
+IMPORTANT FEATURES OF BRANCHING
+->when we create a branch the new branch the new branch inhert the proporty of masterbranch.
+->the branch are located fr4m each other means the develper modify the content frm one branch 
+
+PRACTICAL
+
+step1: open a defult dir
+step2: git init
+step3: create a txt files
+       touch a.txt
+step4:-add the file to stageing area
+  git add a.txt
+step 5 -commit the files
+      git commit -m "msg"
+step6: -view the branch
+      git branchy
+step7: -create a new branch 
+         git branch feature
+step:8 -switch one branch frm another branch 
+        git checkout master 
+step9: -creating branch and shifting to that branchy at a time 
+         git checkout -b feature
+step10:-to switch to mastert branch 
+        git checkout master 
+step11:-create txt file
+       touch b.txt c.txt
+step12:add and commit
+    
+Branching:
+1)Open a default directory create a folder like:>> git project.
+2)Open a git command prompt type:>> git init
+3)To create a file type:>> touch filename.
+4)To know wheather the file is created or not type:>> ls[it will show the file name]
+5)To add the file into staging mode:>> git add filename.
+6)To commit a file:>> git commit -m "filename".
+7)To view the branches:>> git branch.
+8)To know which is a active branch:>> git status.
+9)To create a new branch:>> git branch branchname.
+10)Switch from one branch to another branch:>> git checkout branchname.
+11)Create and switch to the branch:>> git checkout -b branchname.
+12)Again switch to the master branch:>> ls.
+13)To switch to a master branch:>> git checkout master.
+14)To create the files in it:>> touch "filename" "filename".
+15)To list the files from active branch:>> ls.
+16)To add the files to a staging and commit a file:>> git add filename;git commit -m  "filename".
+17)To know the staging file:>> git ls-files.
+18)To know the commited file:>> git log --oneline.
+                              git status.
+			      ls.
+			      git checkout filename.
+			      ls.
+			      git log --oneline.
+			      git branch.
+			      touch "filename" "filename".
+			      git filename;git commit -m "filename".
+			      git filename;git commit -m "filename".
+			      ls
+			      git checkout master.
+			      ls.
+
+Merging:
+      Once we complete the feature branch [new branch] we can merge new branch with maste r branch.
+There are two ways of merging:
+1.Fast forward merge.
+2.Three-way merge.
+
+
+Fast forward merge:
+In a default directory create a folder:>> gitproject.
+Open a git bash:>>
+git init.
+touch "filename" "filename".
+git add filename;git commit -m "filename".
+git add filename;git commit -m "filename".
+git log --oneline.
+git branch feature.
+git branch.
+git checkout feature.
+touch "filename" "filename".
+git add filename;git commit -m "c1f".
+git add filename;git commit -m "c2f".
+ls.
+git log --oneline.
+git checkout master.
+git branch.
+git merge feature.
+ls.
+git log --oneline.
+
+Three way merge:
+mkdir "foldername".
+cd "foldername".
+git init.
+touch "filename" "filename".
+git add filename;git commit -m "c1m".
+git add filename;git commit -m "c2m".  
+git log --oneline.
+git branch.
+git branch feature.
+git checkout feature.
+touch "filename" "filename".
+git add filename;git commit -m "c1f".
+git add filename;git commit -m "c1f".
+git log --oneline.
+git checkout master.
+git branch.
+ls.
+git log --oneline.
+touch "filename".
+git add filename;git commit -m "c3m".
+ls.
+git log --oneline.
+git branch.
+git merge feature.
+git log --oneline.
+
+Github:
+        Github is the hosting service for git repositories. Git is the tool, while github is the service to use git.
+
+Creating a Github account:
+Open google chrome in a search list type "sign in github".
+Click on sign up button to create a new account in a github.
+Specify username,email address,password.After specifying the email, a confirmation mail send to your e-mail account.
+Open your email account,open the confirmation mail and confirm it by clicking on t he link present in a mail.
+After creating a account click on sign in and provide username and password and click on sign in button.
+To create a new repository you have two options, first click on new button and sec ond the option "new repository".
+Mention the repository name like:>> testrepo.
+If you want your repository can be accessed by anybody select "public" option.
+Click on create repository button.
+We get the repository URL by sharing this URL anybody can access your repository.
+To create a new file in remote repository, click on "creating a new file" link.
+Specify the filename and mention the link.
+After writting the content click on "commit new file".
+To clone the repository into your local system, open the default folder and right  click on the folder and select option "git bash".
+In git command prompt type:>>
+git clone "paste the link".
+git cd "filename".
+git cd repository name.
+ls.
+cat filename.
+vim filename1.
+vim filename.
+git add .
+git commit -m "content".
+git log --oneline.
+git push orgin main.
+In a remote repository [github] open a file and edit the content.
+After writting the content click on "commit changes" button.
+In a git command prompt check the changes or content happen or not and type:>> cat filename.
+To update the content in local repository:>> git pull origin main.
+
+
+Undo Changes:
+mkdir foldername.
+cd foldername.
+vim filename.
+git init.
+git add .
+git commit -m "first commit".
+cat filename.
+vim fileame.
+cat filename:>> now it happens or is called as unstagged changes.
+The cahnges which we done at second time is not the part of our stagging so we 
+ discard them:>> git checkout --filename.
+Finally now it show what we done before with discarding with changes:>> cat 
+ filename.
+
+Collabration:
+      Using collabration concept for single repository [project] we can invite 
+number of users so that we can work together.
+
+Create a repository add the files.
+Click on repository add the files.
+Click on add people button to add the users by specifying username or email id,
+ click on "select a collabrator ".
+Click on add the user into the repository.
+Invited user will open the github account, click on profile drop down list and 
+ select the option as "your organization".
+Click on"join" and next click on "accept invitation" button.
+The repository will display in the invited user.
+To copy the repository from remote to local click on "code drop down list" and 
+ copy the URL.
+Open the git command prompt create a folder right click on a folder and select the option "git bash".
+git clone "paste the link here".
+cd.
+vim filename.
+git status.
+git add .
+git commit -m "content".
+git push origin main.
+
+Migration:
+Open the github profile with overview page.
+Next click on your repository.
+Click on your profile drop down option and select the import repository option.
+It will open the page as import your project to github.
+There paste your old URL of your repository.
+Next give the repository name.\
+Click on "being import".
+Lastly it displays in local repository after importing.
